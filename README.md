@@ -3,6 +3,11 @@
 A library to interact with FakeYou APIs
 
 ## Usage
+Install
+```
+composer require shreejalmaharjan-27/php-fakeyou
+```
+
 Import library
 ```php
 use Shreejalmaharjan27\PhpFakeyou\FakeYou;
