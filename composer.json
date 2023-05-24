@@ -1,0 +1,22 @@
+{
+    "name": "shreejalmaharjan-27/php-fakeyou",
+    "description": "A PHP interface to interact with FakeYou APIs",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Shreejalmaharjan27\\PhpFakeyou\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "shreejalmaharjan-27",
+            "email": "shreejal@rafled.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "guzzlehttp/guzzle": "^7.7",
+        "ramsey/uuid": "^4.7"
+    }
+}
