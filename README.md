@@ -45,7 +45,7 @@ var_dump($check);
 
 LipSync Generation
 ```php
-$video = $api->lipsync('https://example.com/audio.wav')
+$video = $api->lipsync('https://example.com/audio.wav', 'WT:fp46xr2zewkt7yv14ptbehb1fcnth');
 ```
 
 Check if video has been generated

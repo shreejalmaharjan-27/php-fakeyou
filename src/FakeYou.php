@@ -143,16 +143,36 @@ class FakeYou {
      *
      * @return array
      */
-    public function lipsync(string $audio): array
+    public function lipsync(string $audio, string $model): array
     {
         $getAudio = file_get_contents($audio);
 
         $payload = [
             'audio'=>$getAudio,
-            'template_token' => 'WT:fp46xr2zewkt7yv14ptbehb1fcnth',
+            'template_token' => $model,
             'uuid_idempotency_token' => Uuid::uuid4()->toString(),
         ];
         $response = $this->request('/w2l/inference', $payload, 'POST', false, 'multipart');
         return $response;
+    }
+
+    /**
+     * Get a list of all Audio Voices
+     *
+     * @return array
+     */
+    public function audioList(): array
+    {
+        return $this->request('/tts/list');
+    }
+
+    /**
+     * Get a list of all Lipsync Models
+     *
+     * @return array
+     */
+    public function lipsyncList(): array
+    {
+        return $this->request('/w2l/list');
     }
 }
